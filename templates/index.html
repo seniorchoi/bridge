@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Generator MVP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Left Sidebar -->
+    <div id="sidebar">
+        <h2>Files</h2>
+        <ul>
+            <li>app.py</li>
+            <li>index.html</li>
+            <li>Live Preview</li>
+        </ul>
+    </div>
+
+    <!-- Main Workspace -->
+    <div id="workspace">
+        <div id="code-blocks">
+            <!-- Code blocks will be displayed here -->
+        </div>
+    </div>
+
+    <!-- Live Preview -->
+    <div id="live-preview">
+        <iframe id="preview-frame"></iframe>
+    </div>
+
+    <!-- Chat Bar at the Bottom -->
+    <div id="chat-bar">
+        <form id="description-form">
+            <input type="text" id="description" name="description" placeholder="Describe your web app..." required>
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
